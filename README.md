@@ -1,4 +1,4 @@
-dup - diff-uploader [![Build Status](https://travis-ci.org/rytmrt/dup.svg)](https://travis-ci.org/rytmrt/dup)
+dup -- diff-uploader [![Build Status](https://travis-ci.org/rytmrt/dup.svg)](https://travis-ci.org/rytmrt/dup)
 ====
 
 ## Description
@@ -8,55 +8,61 @@ Do updating by difference in the choose version and the current version.
 
 ## Usage
 
+
 ```
-Usage: dup [-nD] [tag] server_name
+Usage: dup <command> [<args>]
 
-
-DESCRIPTIONS
+  The command are as follows:
+  deploy [-nD] [-r choose_rev]
+    Do updating by difference in the choose revision and the current revision.
 
     The options are as follows:
     -n,--dry-run
-        To order check contents of update.
+      To order check contents of update.
     -D,--delete
-        Has been deleted files so remove files on server.
-    tag
-        contents in server for diff.
-    server_name
-        server name. need pre-registered server name.
-```
+      Has been deleted files so remove files on server.
+    -r,--revision
+      Specify the revision to deploy.
 
-
-```
-Usage: dup-server [-a server_name hostname [-p port] [-l login_name] [-i identity_file]]
-                  [-c server_name [hostname] [-p port] [-l login_name] [-i identity_file]]
-                  [-D server_name]
-
-
-DESCRIPTIONS
+  init [-N server_name]
+    Create skeleton for deplpyment.
 
     The options are as follows:
-    -a,--append
-        Appending server info.
+    -N,--server-name
+      server name for deployment.  The default is empty.
 
-    -c,--change
-        Changing server info of server_name.
+  server-list
+    Show server list.
 
-    -D,--delete
-        Deleting server info of server_name.
+  server-add <server_name> [-h hostname] [-p port] [-l login_name] [-i identity_file]
+    Add server infomation.
 
+    The arguments are as follows:
     server_name
-        when you use of dup,  use this.
+      when you use of dup,  use this.
 
-    hostname
-        Host name for server.  "user@hostname" is unsupported format.
+    The options are as follows:
+    -h hostname, --host hostname
+      Host name for server.  "user@hostname" is unsupported format.  The default is 'localhost'.
 
     -p port
-        Port to connect to on the remote host.  The default port is "22".
+      Port to connect to on the remote host.  The default port is "22".
 
     -l login_name
-        Specify the user to login as the remote machine.
+      Specify the user to login as the remote machine.
 
     -i identity_file
-        Selects a file from which the identity (private key) for public key authentication is read.  The default is password authentication.
+      Selects a file from which the identity (private key) for public key authentication is read.  The default is password authentication.
+
+  server-chg <server_name> [-h hostname] [-p port] [-l login_name] [-i identity_file]
+    Change server infomation.
+
+    The options and the arguments see server-add command.
+
+  server-del <server_name>
+    Change server infomation.
+
+    The options and the arguments see server-add command.
+
 ```
 
