@@ -1,4 +1,4 @@
-dup - diff-uploader
+dup - diff-uploader [![Build Status](https://travis-ci.org/rytmrt/dup.svg)](https://travis-ci.org/rytmrt/dup)
 ====
 
 ## Description
