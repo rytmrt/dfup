@@ -2,6 +2,6 @@ package command
 
 import "testing"
 
-func TestCmdServer-Chg(t *testing.T) {
+func TestCmdChg(t *testing.T) {
 	// Write your code here
 }

@@ -2,7 +2,7 @@ package command
 
 import "github.com/codegangsta/cli"
 
-func CmdServer-List(c *cli.Context) {
+func CmdDel(c *cli.Context) {
 	// Write your code here
-    
+
 }
