@@ -15,21 +15,21 @@ Framework = "codegangsta_cli"
   Help = "[Usage] dup init [-N server_name]"
 
 [[Commands]]
-  Name = "server-list"
+  Name = "list"
   Synopsis = "Show server list"
-  Help = "[Usage] dup server-list"
+  Help = "[Usage] dup list"
 
 [[Commands]]
-  Name = "server-add"
+  Name = "add"
   Synopsis = "Add server infomation"
-  Help = "[Usage] dup server-add <server_name> [-h hostname] [-p port] [-l login_name] [-i identity_file]"
+  Help = "[Usage] dup add <server_name> [-h hostname] [-p port] [-l login_name] [-i identity_file]"
 
 [[Commands]]
-  Name = "server-chg"
+  Name = "chg"
   Synopsis = "Change server infomation"
-  Help = "[Usage] dup server-chg <server_name> [-h hostname] [-p port] [-l login_name] [-i identity_file]"
+  Help = "[Usage] dup chg <server_name> [-h hostname] [-p port] [-l login_name] [-i identity_file]"
 
 [[Commands]]
-  Name = "server-del"
+  Name = "del"
   Synopsis = "Change server infomation"
-  Help = "[Usage] dup server-del <server_name>"
+  Help = "[Usage] dup del <server_name>"
