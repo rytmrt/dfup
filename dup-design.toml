@@ -1,5 +1,5 @@
 Name = "dup"
-Owner = "Ryota Morita"
+Owner = "rytmrt"
 Version = "0.1.0"
 Description = "Do updating by difference in the choose version and the current version"
 Framework = "codegangsta_cli"
