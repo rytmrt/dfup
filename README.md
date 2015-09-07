@@ -25,8 +25,6 @@ The options are as follows
   Specify the revision to deploy.
 ```
 
-
-
 ### init
 Create skeleton for deplpyment.
 
@@ -41,16 +39,12 @@ The options are as follows
 server name for deployment.  The default is empty.
 ```
 
-
-
 ### list
 Show server list.
 
 ```bash
  $ dup list
 ```
-
-
 
 ### add
 Add server infomation.
@@ -82,8 +76,6 @@ The options are as follows
   Selects a file from which the identity (private key) for public key authentication is read.  The default is password authentication.
 ```
 
-
-
 ### chg
 Change server infomation.
 
@@ -92,8 +84,6 @@ $ dup chg <server_name> [-h hostname] [-p port] [-l login_name] [-i identity_fil
 ```
 
 The options and the arguments see server-add command.
-
-
 
 ### del
 Change server infomation.
