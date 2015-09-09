@@ -17,11 +17,11 @@ Do updating by difference in the choose revision and the current revision.
 The options are as follows
 
 ```
--n,--dry-run
-  To order check contents of update.
--D,--delete
+-n
+  Dry run.  To order check contents of update.
+-D
   Has been deleted files so remove files on server.
--r,--revision
+-r
   Specify the revision to deploy.
 ```
 
@@ -35,7 +35,7 @@ Create skeleton for deplpyment.
 The options are as follows
 
 ```
--N,--server-name
+-N
 server name for deployment.  The default is empty.
 ```
 
@@ -50,7 +50,7 @@ Show server list.
 Add server infomation.
 
 ```bash
- $ dup add <server_name> [-h hostname] [-p port] [-l login_name] [-i identity_file]
+ $ dup add <server_name> [-h hostname] [-p port] [-l login_name] [-i identity_file] [-P]
 ```
 
 The arguments are as follows:
@@ -63,7 +63,7 @@ server_name
 The options are as follows
 
 ```
--h hostname, --host hostname
+-h hostname
   Host name for server.  "user@hostname" is unsupported format.  The default is 'localhost'.
 
 -p port
@@ -74,6 +74,9 @@ The options are as follows
 
 -i identity_file
   Selects a file from which the identity (private key) for public key authentication is read.  The default is password authentication.
+
+-P
+  Using password authentication.
 ```
 
 ### chg
