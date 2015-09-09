@@ -1,7 +1,11 @@
 package command
 
-import "testing"
+import (
+	"testing"
 
-func TestCmdList(t *testing.T) {
-	// Write your code here
+	"github.com/mitchellh/cli"
+)
+
+func TestListCommand_implement(t *testing.T) {
+	var _ cli.Command = &ListCommand{}
 }

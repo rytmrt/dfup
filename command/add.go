@@ -1,8 +1,26 @@
 package command
 
-import "github.com/codegangsta/cli"
+import (
+	"strings"
+)
 
-func CmdAdd(c *cli.Context) {
+type AddCommand struct {
+	Meta
+}
+
+func (c *AddCommand) Run(args []string) int {
 	// Write your code here
 
+	return 0
+}
+
+func (c *AddCommand) Synopsis() string {
+	return "Add server infomation"
+}
+
+func (c *AddCommand) Help() string {
+	helpText := `
+
+`
+	return strings.TrimSpace(helpText)
 }

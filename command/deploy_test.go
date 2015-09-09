@@ -1,7 +1,11 @@
 package command
 
-import "testing"
+import (
+	"testing"
 
-func TestCmdDeploy(t *testing.T) {
-	// Write your code here
+	"github.com/mitchellh/cli"
+)
+
+func TestDeployCommand_implement(t *testing.T) {
+	var _ cli.Command = &DeployCommand{}
 }

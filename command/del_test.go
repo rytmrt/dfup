@@ -1,7 +1,11 @@
 package command
 
-import "testing"
+import (
+	"testing"
 
-func TestCmdDel(t *testing.T) {
-	// Write your code here
+	"github.com/mitchellh/cli"
+)
+
+func TestDelCommand_implement(t *testing.T) {
+	var _ cli.Command = &DelCommand{}
 }

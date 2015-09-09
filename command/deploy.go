@@ -1,8 +1,26 @@
 package command
 
-import "github.com/codegangsta/cli"
+import (
+	"strings"
+)
 
-func CmdDeploy(c *cli.Context) {
+type DeployCommand struct {
+	Meta
+}
+
+func (c *DeployCommand) Run(args []string) int {
 	// Write your code here
 
+	return 0
+}
+
+func (c *DeployCommand) Synopsis() string {
+	return "Deploy to diff"
+}
+
+func (c *DeployCommand) Help() string {
+	helpText := `
+
+`
+	return strings.TrimSpace(helpText)
 }
