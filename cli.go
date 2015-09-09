@@ -21,8 +21,7 @@ func Run(args []string) int {
 				ErrorWriter: os.Stderr,
 				Reader:      os.Stdin,
 			},
-		}
-	}
+		}}
 
 	return RunCustom(args, Commands(meta))
 }
