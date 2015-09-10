@@ -35,6 +35,7 @@ func TestParseServerOption_implement(t *testing.T) {
 		{"server_name_24", "-H", "host.name", "-l", "admin", "-i", "~/identity_file", "-P"},
 		{"server_name_25", "-p", "23", "-l", "admin", "-i", "~/identity_file", "-P"},
 		{"server_name_26", "-H", "host.name", "-p", "23", "-l", "admin", "-i", "~/identity_file", "-P"},
+		{"--help"},
 	}
 
 	
@@ -67,6 +68,7 @@ func TestParseServerOption_implement(t *testing.T) {
 		ServerOptions{ serverName: "server_name_24", hostName: "host.name", port: 22, loginName: "admin", identityFile: "~/identity_file", password: true },
 		ServerOptions{ serverName: "server_name_25", hostName: "localhost", port: 23, loginName: "admin", identityFile: "~/identity_file", password: true },
 		ServerOptions{ serverName: "server_name_26", hostName: "host.name", port: 23, loginName: "admin", identityFile: "~/identity_file", password: true },
+		ServerOptions{ serverName: "ERROR",          hostName: "",          port: 0,  loginName: "",      identityFile: "",                password: false},
 	}
 
 	for i, v := range testCase {
