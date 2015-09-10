@@ -5,12 +5,12 @@ import (
 )
 
 type ServerOptions struct {
-		serverName string
-		hostName string
-		port int
-		password bool
-		loginName string
-		identityFile string
+	serverName string
+	hostName string
+	port int
+	password bool
+	loginName string
+	identityFile string
 }
 
 func parseServerOption(args []string) (options ServerOptions) {
