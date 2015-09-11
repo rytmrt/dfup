@@ -97,6 +97,22 @@ $ dup del <server_name>
 
 The options and the arguments see server-add command.
 
+
+### Server setting
+
+Location path: `~/.dup/server_list/`
+File neme: `<SERVER_NAME>.toml`
+
+```toml
+[[ServerOptions]]
+serverName   = "server_name"
+hostName     = "localhost"
+port         = 22
+loginName    = "root"
+identityFile = "~/.ssh/id_rsa"
+password     = false
+```
+
 ## Install
 
 To install, use `go get`:
