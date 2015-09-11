@@ -2,6 +2,13 @@ package command
 
 import (
 	"flag"
+	"os/user"
+	"strings"
+)
+
+const (
+	LocationPath = "~/.dup/server_options/"
+	Extenstion   = ".toml"
 )
 
 type ServerOptions struct {
@@ -48,4 +55,26 @@ func parseServerOption(args []string) (options ServerOptions) {
 	}
 
 	return
+}
+
+func ConvPath(srcPath string) string {
+	usr, _ := user.Current()
+	r := strings.Replace(srcPath, "~", user.HomeDir, 1)
+	return r
+}
+
+func SaveServerOptionsFile(serverOptions *ServerOptions) int {
+	return -1
+}
+
+func LoadingServerOptionsFile(serverName string) (serverOptions *ServerOptions) {
+	return nil
+}
+
+func Toml2ServerOptions(str string) (serverOptions *ServerOptions) {
+	return nil
+}
+
+func ServerOptions2Toml(serverOptions *ServerOptions) string {
+	return "error code: -1"
 }
