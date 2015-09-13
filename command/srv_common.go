@@ -12,11 +12,11 @@ const (
 )
 
 type ServerOptions struct {
-	serverName string
-	hostName string
-	port int
-	password bool
-	loginName string
+	serverName   string
+	hostName     string
+	port         int
+	password     bool
+	loginName    string
 	identityFile string
 }
 
@@ -34,7 +34,6 @@ func parseServerOption(args []string) (options ServerOptions) {
 
 	var help bool
 	flags.BoolVar(&help, "h", false, "Show help")
-
 
 	// Parse commandline flag
 	if err := flags.Parse(args[0:]); err != nil {
@@ -59,7 +58,7 @@ func parseServerOption(args []string) (options ServerOptions) {
 
 func ConvPath(srcPath string) string {
 	usr, _ := user.Current()
-	r := strings.Replace(srcPath, "~", user.HomeDir, 1)
+	r := strings.Replace(srcPath, "~", usr.HomeDir, 1)
 	return r
 }
 

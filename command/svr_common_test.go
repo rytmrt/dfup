@@ -38,37 +38,36 @@ func TestParseServerOption_implement(t *testing.T) {
 		{"--help"},
 	}
 
-	
 	testResult := []ServerOptions{
-		ServerOptions{ serverName: "SHOW_HELP",      hostName: "localhost", port: 22, loginName: "root",  identityFile: "~/.ssh/id_rsa",   password: false},
-		ServerOptions{ serverName: "server_name_00", hostName: "host.name", port: 22, loginName: "root",  identityFile: "~/.ssh/id_rsa",   password: false},
-		ServerOptions{ serverName: "server_name_01", hostName: "localhost", port: 23, loginName: "root",  identityFile: "~/.ssh/id_rsa",   password: false},
-		ServerOptions{ serverName: "server_name_02", hostName: "localhost", port: 22, loginName: "admin", identityFile: "~/.ssh/id_rsa",   password: false},
-		ServerOptions{ serverName: "server_name_03", hostName: "localhost", port: 22, loginName: "root",  identityFile: "~/identity_file", password: false},
-		ServerOptions{ serverName: "server_name_04", hostName: "localhost", port: 22, loginName: "root",  identityFile: "~/.ssh/id_rsa",   password: true },
-		ServerOptions{ serverName: "server_name_05", hostName: "host.name", port: 23, loginName: "root",  identityFile: "~/.ssh/id_rsa",   password: false},
-		ServerOptions{ serverName: "server_name_06", hostName: "host.name", port: 22, loginName: "root",  identityFile: "~/identity_file", password: false},
-		ServerOptions{ serverName: "server_name_07", hostName: "host.name", port: 22, loginName: "admin", identityFile: "~/.ssh/id_rsa",   password: false},
-		ServerOptions{ serverName: "server_name_08", hostName: "localhost", port: 23, loginName: "admin", identityFile: "~/.ssh/id_rsa",   password: false},
-		ServerOptions{ serverName: "server_name_09", hostName: "localhost", port: 23, loginName: "root",  identityFile: "~/identity_file", password: false},
-		ServerOptions{ serverName: "server_name_10", hostName: "localhost", port: 22, loginName: "admin", identityFile: "~/identity_file", password: false},
-		ServerOptions{ serverName: "server_name_11", hostName: "host.name", port: 23, loginName: "admin", identityFile: "~/.ssh/id_rsa",   password: false},
-		ServerOptions{ serverName: "server_name_12", hostName: "host.name", port: 23, loginName: "root",  identityFile: "~/identity_file", password: false},
-		ServerOptions{ serverName: "server_name_13", hostName: "host.name", port: 22, loginName: "admin", identityFile: "~/identity_file", password: false},
-		ServerOptions{ serverName: "server_name_14", hostName: "localhost", port: 23, loginName: "admin", identityFile: "~/identity_file", password: false},
-		ServerOptions{ serverName: "server_name_15", hostName: "host.name", port: 23, loginName: "admin", identityFile: "~/identity_file", password: false},
-		ServerOptions{ serverName: "server_name_16", hostName: "host.name", port: 23, loginName: "root",  identityFile: "~/.ssh/id_rsa",   password: true },
-		ServerOptions{ serverName: "server_name_17", hostName: "host.name", port: 22, loginName: "root",  identityFile: "~/identity_file", password: true },
-		ServerOptions{ serverName: "server_name_18", hostName: "host.name", port: 22, loginName: "admin", identityFile: "~/.ssh/id_rsa",   password: true },
-		ServerOptions{ serverName: "server_name_19", hostName: "localhost", port: 23, loginName: "admin", identityFile: "~/.ssh/id_rsa",   password: true },
-		ServerOptions{ serverName: "server_name_20", hostName: "localhost", port: 23, loginName: "root",  identityFile: "~/identity_file", password: true },
-		ServerOptions{ serverName: "server_name_21", hostName: "localhost", port: 22, loginName: "admin", identityFile: "~/identity_file", password: true },
-		ServerOptions{ serverName: "server_name_22", hostName: "host.name", port: 23, loginName: "admin", identityFile: "~/.ssh/id_rsa",   password: true },
-		ServerOptions{ serverName: "server_name_23", hostName: "host.name", port: 23, loginName: "root",  identityFile: "~/identity_file", password: true },
-		ServerOptions{ serverName: "server_name_24", hostName: "host.name", port: 22, loginName: "admin", identityFile: "~/identity_file", password: true },
-		ServerOptions{ serverName: "server_name_25", hostName: "localhost", port: 23, loginName: "admin", identityFile: "~/identity_file", password: true },
-		ServerOptions{ serverName: "server_name_26", hostName: "host.name", port: 23, loginName: "admin", identityFile: "~/identity_file", password: true },
-		ServerOptions{ serverName: "ERROR",          hostName: "",          port: 0,  loginName: "",      identityFile: "",                password: false},
+		ServerOptions{serverName: "SHOW_HELP", hostName: "localhost", port: 22, loginName: "root", identityFile: "~/.ssh/id_rsa", password: false},
+		ServerOptions{serverName: "server_name_00", hostName: "host.name", port: 22, loginName: "root", identityFile: "~/.ssh/id_rsa", password: false},
+		ServerOptions{serverName: "server_name_01", hostName: "localhost", port: 23, loginName: "root", identityFile: "~/.ssh/id_rsa", password: false},
+		ServerOptions{serverName: "server_name_02", hostName: "localhost", port: 22, loginName: "admin", identityFile: "~/.ssh/id_rsa", password: false},
+		ServerOptions{serverName: "server_name_03", hostName: "localhost", port: 22, loginName: "root", identityFile: "~/identity_file", password: false},
+		ServerOptions{serverName: "server_name_04", hostName: "localhost", port: 22, loginName: "root", identityFile: "~/.ssh/id_rsa", password: true},
+		ServerOptions{serverName: "server_name_05", hostName: "host.name", port: 23, loginName: "root", identityFile: "~/.ssh/id_rsa", password: false},
+		ServerOptions{serverName: "server_name_06", hostName: "host.name", port: 22, loginName: "root", identityFile: "~/identity_file", password: false},
+		ServerOptions{serverName: "server_name_07", hostName: "host.name", port: 22, loginName: "admin", identityFile: "~/.ssh/id_rsa", password: false},
+		ServerOptions{serverName: "server_name_08", hostName: "localhost", port: 23, loginName: "admin", identityFile: "~/.ssh/id_rsa", password: false},
+		ServerOptions{serverName: "server_name_09", hostName: "localhost", port: 23, loginName: "root", identityFile: "~/identity_file", password: false},
+		ServerOptions{serverName: "server_name_10", hostName: "localhost", port: 22, loginName: "admin", identityFile: "~/identity_file", password: false},
+		ServerOptions{serverName: "server_name_11", hostName: "host.name", port: 23, loginName: "admin", identityFile: "~/.ssh/id_rsa", password: false},
+		ServerOptions{serverName: "server_name_12", hostName: "host.name", port: 23, loginName: "root", identityFile: "~/identity_file", password: false},
+		ServerOptions{serverName: "server_name_13", hostName: "host.name", port: 22, loginName: "admin", identityFile: "~/identity_file", password: false},
+		ServerOptions{serverName: "server_name_14", hostName: "localhost", port: 23, loginName: "admin", identityFile: "~/identity_file", password: false},
+		ServerOptions{serverName: "server_name_15", hostName: "host.name", port: 23, loginName: "admin", identityFile: "~/identity_file", password: false},
+		ServerOptions{serverName: "server_name_16", hostName: "host.name", port: 23, loginName: "root", identityFile: "~/.ssh/id_rsa", password: true},
+		ServerOptions{serverName: "server_name_17", hostName: "host.name", port: 22, loginName: "root", identityFile: "~/identity_file", password: true},
+		ServerOptions{serverName: "server_name_18", hostName: "host.name", port: 22, loginName: "admin", identityFile: "~/.ssh/id_rsa", password: true},
+		ServerOptions{serverName: "server_name_19", hostName: "localhost", port: 23, loginName: "admin", identityFile: "~/.ssh/id_rsa", password: true},
+		ServerOptions{serverName: "server_name_20", hostName: "localhost", port: 23, loginName: "root", identityFile: "~/identity_file", password: true},
+		ServerOptions{serverName: "server_name_21", hostName: "localhost", port: 22, loginName: "admin", identityFile: "~/identity_file", password: true},
+		ServerOptions{serverName: "server_name_22", hostName: "host.name", port: 23, loginName: "admin", identityFile: "~/.ssh/id_rsa", password: true},
+		ServerOptions{serverName: "server_name_23", hostName: "host.name", port: 23, loginName: "root", identityFile: "~/identity_file", password: true},
+		ServerOptions{serverName: "server_name_24", hostName: "host.name", port: 22, loginName: "admin", identityFile: "~/identity_file", password: true},
+		ServerOptions{serverName: "server_name_25", hostName: "localhost", port: 23, loginName: "admin", identityFile: "~/identity_file", password: true},
+		ServerOptions{serverName: "server_name_26", hostName: "host.name", port: 23, loginName: "admin", identityFile: "~/identity_file", password: true},
+		ServerOptions{serverName: "ERROR", hostName: "", port: 0, loginName: "", identityFile: "", password: false},
 	}
 
 	for i, v := range testCase {
@@ -92,4 +91,46 @@ func TestParseServerOption_implement(t *testing.T) {
 			t.Errorf("missing password.  wrong: %v.  test case: %#v", svrOptions.password, v)
 		}
 	}
+}
+
+func TestSaveServerOptionsFile(t *testing.T) {
+	serverOptions := ServerOptions{
+		serverName:   "sever_name",
+		hostName:     "localhost",
+		port:         22,
+		loginName:    "root",
+		identityFile: "~/.ssh/id_rsa",
+		password:     false,
+	}
+	res := SaveServerOptionsFile(&serverOptions)
+}
+
+func TestLoadingServerOptionsFile(t *testing.T) {
+	serverName := "name"
+	LoadingServerOptionsFile(serverName)
+}
+
+func TestToml2ServerOptions(t *testing.T) {
+	ans := ServerOptions{
+		serverName:   "sever_name",
+		hostName:     "localhost",
+		port:         22,
+		loginName:    "root",
+		identityFile: "~/.ssh/id_rsa",
+		password:     false,
+	}
+	str := `
+serverName   = "server_name"
+hostName     = "localhost"
+port         = 22
+loginName    = "root"
+identityFile = "~/.ssh/id_rsa"
+password     = false
+`
+	res := Toml2ServerOptions(str)
+}
+
+func TestServerOptions2Toml(t *testing.T) {
+	serverOptions := ServerOptions{serverName: "SHOW_HELP", hostName: "localhost", port: 22, loginName: "root", identityFile: "~/.ssh/id_rsa", password: false}
+	ServerOptions2Toml(&serverOptions)
 }
