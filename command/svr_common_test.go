@@ -71,7 +71,7 @@ func TestParseServerOption_implement(t *testing.T) {
 	}
 
 	for i, v := range testCase {
-		svrOptions := parseServerOption(v)
+		svrOptions := ParseServerOption(v)
 		if svrOptions.serverName != testResult[i].serverName {
 			t.Errorf("missing serverName.  wrong: %v.  test case: %#v", svrOptions.serverName, v)
 		}

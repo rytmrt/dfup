@@ -20,7 +20,7 @@ type ServerOptions struct {
 	identityFile string
 }
 
-func parseServerOption(args []string) (options ServerOptions) {
+func ParseServerOption(args []string) (options ServerOptions) {
 
 	// Define option flag parse
 	flags := flag.NewFlagSet("srv_option", flag.ContinueOnError)

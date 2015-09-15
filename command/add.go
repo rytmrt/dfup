@@ -1,8 +1,8 @@
 package command
 
 import (
-	"strings"
 	"fmt"
+	"strings"
 )
 
 type AddCommand struct {
@@ -19,11 +19,10 @@ func (c *AddCommand) Run(args []string) int {
 	)
 
 	if len(args) < 0 {
-		options = parseServerOption(args)
+		options = ParseServerOption(args)
 	} else {
 		argsErr = true
 	}
-
 
 	if argsErr || options.serverName == "ERROR" || options.serverName == "" || options.serverName == "SHOW_HELP" {
 		c.Ui.Output(c.Help())
