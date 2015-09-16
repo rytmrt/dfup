@@ -2,6 +2,9 @@ package command
 
 import (
 	"flag"
+	"fmt"
+	"golang.org/x/crypto/ssh"
+	"io/ioutil"
 	"os/user"
 	"strings"
 )
@@ -75,5 +78,39 @@ func Toml2ServerOptions(str string) (serverOptions ServerOptions, e error) {
 }
 
 func ServerOptions2Toml(serverOptions *ServerOptions) (toml string, e error) {
+	return
+}
+
+func ServerUpdate(server ServerOptions, modList []string, addList []string, delList []string) (e error) {
+	// cennect server -----
+	key, err := GetKeyFile(server.identityFile)
+	if err != nil {
+		return err
+	}
+
+	config := &ssh.ClientConfig{
+		User: server.serverName,
+		Auth: []ssh.AuthMethod{
+			ssh.PublicKeys(key),
+		},
+	}
+
+	fmt.Printf("%#v", *config)
+
+	// upload to server -----
+	// delete to server -----
+	return
+}
+
+func GetKeyFile(path string) (key ssh.Signer, err error) {
+	file := ConvPath(path)
+	buf, err := ioutil.ReadFile(file)
+	if err != nil {
+		return
+	}
+	key, err = ssh.ParsePrivateKey(buf)
+	if err != nil {
+		return
+	}
 	return
 }
