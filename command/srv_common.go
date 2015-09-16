@@ -62,18 +62,18 @@ func ConvPath(srcPath string) string {
 	return r
 }
 
-func SaveServerOptionsFile(serverOptions *ServerOptions) int {
-	return -1
+func SaveServerOptionsFile(serverOptions ServerOptions) (e error) {
+	return
 }
 
-func LoadingServerOptionsFile(serverName string) (serverOptions *ServerOptions) {
-	return nil
+func LoadingServerOptionsFile(serverName string) (serverOptions ServerOptions, e error) {
+	return
 }
 
-func Toml2ServerOptions(str string) (serverOptions *ServerOptions) {
-	return nil
+func Toml2ServerOptions(str string) (serverOptions ServerOptions, e error) {
+	return
 }
 
-func ServerOptions2Toml(serverOptions *ServerOptions) string {
-	return "error code: -1"
+func ServerOptions2Toml(serverOptions *ServerOptions) (toml string, e error) {
+	return
 }

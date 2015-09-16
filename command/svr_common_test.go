@@ -94,43 +94,13 @@ func TestParseServerOption_implement(t *testing.T) {
 }
 
 func TestSaveServerOptionsFile(t *testing.T) {
-	serverOptions := ServerOptions{
-		serverName:   "sever_name",
-		hostName:     "localhost",
-		port:         22,
-		loginName:    "root",
-		identityFile: "~/.ssh/id_rsa",
-		password:     false,
-	}
-	res := SaveServerOptionsFile(&serverOptions)
 }
 
 func TestLoadingServerOptionsFile(t *testing.T) {
-	serverName := "name"
-	LoadingServerOptionsFile(serverName)
 }
 
 func TestToml2ServerOptions(t *testing.T) {
-	ans := ServerOptions{
-		serverName:   "sever_name",
-		hostName:     "localhost",
-		port:         22,
-		loginName:    "root",
-		identityFile: "~/.ssh/id_rsa",
-		password:     false,
-	}
-	str := `
-serverName   = "server_name"
-hostName     = "localhost"
-port         = 22
-loginName    = "root"
-identityFile = "~/.ssh/id_rsa"
-password     = false
-`
-	res := Toml2ServerOptions(str)
 }
 
 func TestServerOptions2Toml(t *testing.T) {
-	serverOptions := ServerOptions{serverName: "SHOW_HELP", hostName: "localhost", port: 22, loginName: "root", identityFile: "~/.ssh/id_rsa", password: false}
-	ServerOptions2Toml(&serverOptions)
 }
